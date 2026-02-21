@@ -1,11 +1,119 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Limpiaya | Empresa de Limpieza en Ibagué Tolima</title>
+
+<meta name="description" content="Limpiaya es una empresa de limpieza en Ibagué, Tolima. Servicios profesionales de limpieza, mantenimiento locativo, desinfección y control de plagas en el centro y norte del Tolima.">
+<meta name="theme-color" content="#0f172a">
+
+<link rel="canonical" href="https://limpiaya.github.io/">
+
+<!-- PWA -->
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="icon-192.png">
+
+<!-- TailwindCSS CDN -->
+<script src="https://cdn.tailwindcss.com"></script>
+
+<!-- Open Graph -->
+<meta property="og:title" content="Limpiaya | Servicios de Limpieza en Ibagué">
+<meta property="og:description" content="Empresa profesional de limpieza en Ibagué y el Tolima. Servicio garantizado.">
+<meta property="og:type" content="website">
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "LocalBusiness",
+ "name": "Limpiaya",
+ "address": {
+   "@type": "PostalAddress",
+   "addressLocality": "Ibagué",
+   "addressRegion": "Tolima",
+   "addressCountry": "CO"
+ },
+ "areaServed": "Tolima",
+ "description": "Empresa de limpieza en Ibagué y municipios del centro y norte del Tolima."
+}
+</script>
+
 </head>
-<body>
-    <h1>Pagina en manteniemieto comunicate mas tarde </h1>
+
+<body class="bg-gray-50 text-gray-800">
+
+<!-- NAV -->
+<nav class="bg-slate-900 text-white p-4 fixed w-full shadow-lg z-50">
+  <div class="max-w-6xl mx-auto flex justify-between">
+    <h1 class="font-bold text-lg">Limpiaya</h1>
+    <a href="#contacto" class="bg-green-500 px-4 py-2 rounded-xl">Cotizar</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="pt-28 pb-20 bg-slate-800 text-white text-center px-6">
+  <h2 class="text-4xl md:text-5xl font-bold mb-6">
+    Empresa de Limpieza en Ibagué, Tolima
+  </h2>
+  <p class="max-w-2xl mx-auto text-lg">
+    Servicios profesionales de limpieza, mantenimiento, desinfección y control de plagas en el centro y norte del Tolima.
+  </p>
+</section>
+
+<!-- SERVICIOS -->
+<section class="py-16 max-w-6xl mx-auto px-6">
+  <h2 class="text-3xl font-bold text-center mb-12">Nuestros Servicios</h2>
+
+  <div class="grid md:grid-cols-3 gap-8">
+
+    <div class="bg-white p-6 rounded-2xl shadow-md">
+      <h3 class="font-bold text-xl mb-3">Limpieza General</h3>
+      <p>Oficinas, locales, viviendas, limpieza profunda y post construcción.</p>
+    </div>
+
+    <div class="bg-white p-6 rounded-2xl shadow-md">
+      <h3 class="font-bold text-xl mb-3">Mantenimiento Locativo</h3>
+      <p>Reparaciones eléctricas, sanitarias, pintura y adecuaciones.</p>
+    </div>
+
+    <div class="bg-white p-6 rounded-2xl shadow-md">
+      <h3 class="font-bold text-xl mb-3">Control y Desinfección</h3>
+      <p>Sanitización, limpieza de tanques de agua y control de plagas.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- COBERTURA -->
+<section class="bg-gray-100 py-16 px-6 text-center">
+  <h2 class="text-3xl font-bold mb-6">Zona de Cobertura</h2>
+  <p class="max-w-3xl mx-auto">
+    Atendemos en Ibagué y municipios como Líbano, Mariquita, Honda,
+    Fresno, Armero Guayabal y El Espinal.
+  </p>
+</section>
+
+<!-- CTA -->
+<section id="contacto" class="bg-green-600 text-white py-16 text-center">
+  <h2 class="text-3xl font-bold mb-4">Solicita tu Cotización</h2>
+  <p class="mb-6">Contáctanos hoy mismo</p>
+  <p class="font-bold">+57 XXX XXX XXXX</p>
+  <p>contacto@limpiaya.com</p>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-slate-900 text-white text-center p-6">
+  <p>Limpiaya © 2026</p>
+  <p>Sede principal: Ibagué, Tolima – Colombia</p>
+</footer>
+
+<!-- PWA Service Worker -->
+<script>
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('sw.js')
+}
+</script>
+
 </body>
 </html>
