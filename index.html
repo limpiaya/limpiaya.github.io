@@ -34,7 +34,26 @@
   </script>
 
   <link rel="icon" href="favicon.ico">
+  <style>
+    #tiktok-container {
+      scroll-snap-type: y mandatory;
+    }
 
+    .video-slide {
+      height: 100vh;
+      scroll-snap-align: start;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .tiktok-video {
+      width: 100%;
+      max-width: 400px;
+      height: 90vh;
+      border-radius: 20px;
+    }
+  </style>
 </head>
 
 <body class="bg-lightbg text-gray-700">
@@ -42,11 +61,35 @@
   <!-- NAV -->
   <nav class="bg-white fixed w-full shadow-md z-50">
     <div class="max-w-7xl mx-auto flex items-center justify-between px-6 h-20">
-      <img src="LIMPIAYA3.png" alt="Limpiaya - Empresa de limpieza en Ibagué" class="h-16 w-auto object-contain">
+
+      <!-- Logo + Ubicación -->
+      <div class="flex items-center gap-4">
+
+        <img src="LIMPIAYA3.png" alt="Limpiaya - Empresa de limpieza en Ibagué" class="h-16 w-auto object-contain">
+
+        <!-- Ubicación activa -->
+        <div class="flex items-center text-sm font-medium text-gray-600">
+
+          <!-- Icono ubicación SVG -->
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-secondary mr-1" fill="currentColor"
+            viewBox="0 0 24 24">
+            <path
+              d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5z" />
+          </svg>
+
+          Ibagué, Tolima
+        </div>
+        <img src="ibagueindio.png" alt="Limpiaya - Empresa de limpieza en Ibagué" class="h-16 w-auto object-contain">
+
+
+      </div>
+
+      <!-- Botón -->
       <a href="#contacto"
         class="bg-secondary text-white px-6 py-2 rounded-full font-semibold hover:opacity-90 transition">
         Cotizar
       </a>
+
     </div>
   </nav>
 
@@ -260,6 +303,16 @@
     </div>
   </section>
 
+    <!-- Videos de tictok -->
+  <section id="videos" class="relative h-screen overflow-hidden bg-black">
+
+    <div id="tiktok-container" class="h-full overflow-y-scroll snap-y snap-mandatory scroll-smooth">
+
+    </div>
+
+  </section>
+
+
   <!-- COBERTURA -->
   <section class="bg-primary text-white py-20 text-center relative">
 
@@ -313,6 +366,9 @@
       navigator.serviceWorker.register('sw.js')
     }
   </script>
+
+  <script src="/js/videos.js"></script>
+
 
 </body>
 
