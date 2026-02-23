@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
     function closeBanner() {
       banner.classList.remove("opacity-100", "visible");
       banner.classList.add("opacity-0", "invisible");
-      sessionStorage.setItem("bannerClosed", "true");
+      sessionStorage.removeItem("bannerClosed");
     }
   
     closeBtn.addEventListener("click", closeBanner);
